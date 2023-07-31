@@ -12,3 +12,4 @@
 - git branch || untuk mengetahui branch
 - git checkout -b "nama branch" || menambahkan branch
 - git pull origin "nama branch" || menyatukan branch dengan branch yang dituju
+##  PENGENALAN LARAVEL
