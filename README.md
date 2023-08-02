@@ -19,3 +19,5 @@
 
 - instalasi laravel menggunakan composer terlampir pada [link](https://laravel.com/docs/master) berikut
 - pengenalan mengtahui routes, controllers, dan views dalam project yan telah di install
+
+## LANJUTAN LARAVEL
