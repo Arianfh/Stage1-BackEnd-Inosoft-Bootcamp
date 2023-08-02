@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,8 @@ Route::get('/', function () {
 Route::get('/book', [BookController::class, 'index']);
 
 Route::get('/book/create', 'App\Http\Controllers\BookController@create');
+
+Route::get('/item/create', [ItemController::class, 'insertPage']);
+Route::post('/item/post', [ItemController::class, 'store']);
+
+Route::get('/item', [ItemController::class, 'index']);

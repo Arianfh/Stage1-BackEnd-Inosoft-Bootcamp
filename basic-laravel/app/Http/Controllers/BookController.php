@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
+
 
 class BookController extends Controller
 {
@@ -11,11 +13,14 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data = [
-            'title' => 'Book',
-            'subtitle' => 'This is a book'
-        ];
-        return view('book', $data);
+        $bookModel = new Book();
+        $books = $bookModel -> get();
+
+        foreach ($books as $book){
+            echo "Nama Buku : " .$book -> name_book. '<br>';
+            echo "Deskripsi : " .$book -> description. '<br>';
+            echo "Harga : " .$book -> price. '<br>';
+        }
     }
 
     /**
