@@ -24,3 +24,8 @@
 
 - pengenalan model (Eloquent) untuk menghubungkan controller dengan database, migration untuk mengontrol database baik update atau menghapus (field, table, atau elemen lain), seeder membantu dalam data dummy, validation request untuk melakukan validasi data
 - perhatikan dalam perintah ```php artisan make:request``` "nama validasi request" terdapat function authorize yang dapat mempengaruhi saat  melakukan validasi data yang akan digunakan untuk kebutuhan authorization login
+
+## PENGENALAN BASIS DATA & MONGODB
+- pengenalan salah satu jenis database non sql yaitu mongodb serta instalasi ke laravel
+- berikut tata cara instalasi mongodb ke laravel melalui [link](https://www.mongodb.com/docs/php-library/current/tutorial/install-php-library/) berikut
+- serta menggunakan library jenssegers pada [link](https://github.com/jenssegers/laravel-mongodb) berikut
