@@ -29,3 +29,7 @@
 - pengenalan salah satu jenis database non sql yaitu mongodb serta instalasi ke laravel
 - berikut tata cara instalasi mongodb ke laravel melalui [link](https://www.mongodb.com/docs/php-library/current/tutorial/install-php-library/) berikut
 - serta menggunakan library jenssegers pada [link](https://github.com/jenssegers/laravel-mongodb) berikut
+
+## PHP DASAR
+- pengenalan mengenai variabel, tipe data, operator, percabangan, array, string, looping, dan function pada bahasa pemograman PHP
+- jika tipe data string dalam mengandung angka masih dapat diproses melalui tipe data integer
