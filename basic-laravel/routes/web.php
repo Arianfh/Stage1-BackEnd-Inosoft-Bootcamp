@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\BasicPhpController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,11 @@ Route::get('/book/create', 'App\Http\Controllers\BookController@create');
 
 Route::get('/item/create', [ItemController::class, 'insertPage']);
 Route::post('/item/post', [ItemController::class, 'store']);
-
 Route::get('/item', [ItemController::class, 'index']);
+
+Route::get('/variable', [BasicPhpController::class, 'dasarVariabel']);
+Route::get('/operator', [BasicPhpController::class, 'operatorAritmatika']);
+Route::get('/operator/penugasan', [BasicPhpController::class, 'operatorPenugasan']);
+Route::get('/operator/perbandingan', [BasicPhpController::class, 'operatorPerbandingan']);
+Route::get('/operator/logika', [BasicPhpController::class, 'operatorLogika']);
+Route::get('/operator/incrementDecrement', [BasicPhpController::class, 'operatorIncrementDecrement']);
