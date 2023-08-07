@@ -35,3 +35,14 @@ Route::get('/operator/penugasan', [BasicPhpController::class, 'operatorPenugasan
 Route::get('/operator/perbandingan', [BasicPhpController::class, 'operatorPerbandingan']);
 Route::get('/operator/logika', [BasicPhpController::class, 'operatorLogika']);
 Route::get('/operator/incrementDecrement', [BasicPhpController::class, 'operatorIncrementDecrement']);
+
+Route::get('/percabangan/if', [BasicPhpController::class, 'percabanganIf']);
+Route::get('/percabangan/ifelse', [BasicPhpController::class, 'percabanganIfElse']);
+Route::get('/percabangan/ifelseifelse', [BasicPhpController::class, 'percabanganIfelseifElse']);
+Route::get('/percabangan/nestedif', [BasicPhpController::class, 'percabanganNestedIf']);
+Route::get('/percabangan/switchcase', [BasicPhpController::class, 'switchCase']);
+
+Route::get('/array/pertama', [BasicPhpController::class, 'arrayPertama']);
+Route::get('/array/kedua', [BasicPhpController::class, 'arrayKedua']);
+Route::get('/array/ketiga', [BasicPhpController::class, 'arrayKetiga']);
+Route::get('/array/keempat', [BasicPhpController::class, 'arrayKeempat']);

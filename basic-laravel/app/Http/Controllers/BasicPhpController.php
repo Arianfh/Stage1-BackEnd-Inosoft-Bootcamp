@@ -76,4 +76,153 @@ class BasicPhpController extends Controller
         var_dump($d);
         var_dump($c);
     }
+
+    public function percabanganIf()
+    {
+        $kegiatan = "Pergi keluar";
+
+        $hujan = true;
+
+        if($hujan)
+        {
+            $kegiatan = $kegiatan." membawa payung";
+        }
+
+        return $kegiatan;
+    }
+
+    public function percabanganIfElse()
+    {
+        $umur = 25;
+
+        if($umur < 18)
+        {
+            $hasil = "Belum cukup umur";
+        }
+        else
+        {
+            $hasil = "Cukup umur";
+        }
+
+        return $hasil;
+    }
+
+    public function percabanganIfElseifElse()
+    {
+        $angka = 33;
+
+        if ($angka == 0)
+        {
+            $hasil = "Bilangan 0";
+        }
+        elseif ($angka % 2 == 0)
+        {
+            $hasil = "Bilangan genap";
+        }
+        else
+        {
+            $hasil = "Bilangan ganjil";
+        }
+
+        return $hasil;
+    }
+
+    public function percabanganNestedif()
+    {
+        $cintaku = 15;
+        $cintadia = 11;
+
+        if ($cintaku > $cintadia)
+        {
+            $usahadia = 5;
+            $cintadia = $cintadia + $usahadia;
+
+            if ($cintaku > $cintadia)
+            {
+                $hasil = "Aku mencintainya";
+            }
+            else
+            {
+                $hasil = "Dia mencintaiku";
+            }
+        }
+        else
+        {
+            $hasil = "Kamu mencintai dia";
+        }
+        
+        return $hasil;
+    }
+
+    public function switchCase()
+    {
+        $nilai = "C";
+
+        switch($nilai)
+        {
+            case "A":
+                $hasil = "Sangat baik";
+                break;
+            case "B":
+                $hasil = "Baik";
+                break;
+            case "C":
+                $hasil = "Cukup";
+                break;
+            case "D":
+                $hasil = "Kurang";
+                break;
+            default:
+                $hasil = "Nilai tidak ada";
+        }
+
+        return $hasil;
+    }
+
+    public function arrayPertama()
+    {
+        $makananFavorit = ['ayam', 'pecel'];
+        $minumanFavorit = array('teh', 'kopi');
+
+        foreach($makananFavorit as $makanan){
+            echo "$makanan, ";
+        }
+
+        echo "<br>";
+
+        foreach($minumanFavorit as $key => $minuman){
+            echo "$key. $minuman, ";
+        }
+    }
+
+    public function arrayKedua()
+    {
+        $makanan = ['ayam', 'pecel', 'sate'];
+
+        echo "Saya suka makanan ".$makanan[0]." dan ".$makanan[2];
+    }
+
+    public function arrayKetiga()
+    {
+        $makananFavorit = [
+            'Budi' => 'ayam',
+            'Ayah' => 'pecel'
+        ];
+
+        echo "Budi suka makan".$makananFavorit['Budi']." dan Ayah suka makan ".$makananFavorit['Ayah'];
+    }
+
+    public function arrayKeempat()
+    {
+        $dataStatus = [
+            ['Budi', 12, 'jomblo'],
+            ['Joko', 24, 'menikah', ['wiraswasta']]
+        ];
+
+        echo $dataStatus[0][0]." berumur ".$dataStatus[0][1]." berstatus ".$dataStatus[0][2];
+
+        echo "<br>";
+
+        echo $dataStatus[1][0]." berumur ".$dataStatus[1][1]." berstatus ".$dataStatus[1][2]." pekerjaan ".$dataStatus[1][3][0];
+    }
 }
