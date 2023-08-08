@@ -46,3 +46,17 @@ Route::get('/array/pertama', [BasicPhpController::class, 'arrayPertama']);
 Route::get('/array/kedua', [BasicPhpController::class, 'arrayKedua']);
 Route::get('/array/ketiga', [BasicPhpController::class, 'arrayKetiga']);
 Route::get('/array/keempat', [BasicPhpController::class, 'arrayKeempat']);
+
+Route::get('/string/pertama', [BasicPhpController::class, 'stringPertama']);
+Route::get('/string/kedua', [BasicPhpController::class, 'stringKedua']);
+Route::get('/string/ketiga', [BasicPhpController::class, 'stringKetiga']);
+Route::get('/string/keempat', [BasicPhpController::class, 'stringKeempat']);
+
+Route::get('/perulangan/pertama', [BasicPhpController::class, 'perulanganPertama']);
+Route::get('/perulangan/kedua', [BasicPhpController::class, 'perulanganKedua']);
+Route::get('/perulangan/ketiga', [BasicPhpController::class, 'perulanganKetiga']);
+
+Route::get('/function/pertama', [BasicPhpController::class, 'pertama']);
+Route::get('/function/kedua', [BasicPhpController::class, 'kedua']);
+Route::get('/function/ketiga', [BasicPhpController::class, 'ketiga']);
+Route::get('/function/keempat', [BasicPhpController::class, 'keempat']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\In;
 
 class BasicPhpController extends Controller
 {
@@ -224,5 +225,142 @@ class BasicPhpController extends Controller
         echo "<br>";
 
         echo $dataStatus[1][0]." berumur ".$dataStatus[1][1]." berstatus ".$dataStatus[1][2]." pekerjaan ".$dataStatus[1][3][0];
+    }
+
+    public function stringPertama()
+    {
+        $word = "Hello";
+
+        echo strlen($word);
+    }
+
+    public function stringKedua()
+    {
+        $word = "Selamat pagi kakak...";
+
+        echo str_replace("pagi", "malam", $word);
+    }
+
+    public function stringKetiga()
+    {
+        $setences = "Kucing suka makan ikan goreng 5";
+
+        echo str_word_count($setences);
+    }
+
+    public function stringKeempat()
+    {
+        $setences = "Selamat siang dengan bapak ...";
+
+        echo strpos($setences, "bapak");
+    }
+
+    public function perulanganPertama()
+    {
+        $total = 9;
+        $hasilFaktorial = 1;
+
+        for ($i=1; $i <= $total; $i++)
+        {
+            $hasilFaktorial = $hasilFaktorial * $i;
+            echo $i." hasil faktorial ".$hasilFaktorial."<br>";
+        }
+
+        return $hasilFaktorial;
+    }
+
+    public function perulanganKedua()
+    {
+        $counter = 0;
+
+        while ($counter < 5)
+        {
+            echo "Saya menyesal <br>";
+
+            $counter++;
+        }
+    }
+
+    public function perulanganKetiga()
+    {
+        $angka = -2;
+
+        do {
+            $angka --;
+        }
+        while ($angka > 0);
+
+        return "angka = ".$angka;
+    }
+
+    public function pertama()
+    {
+        $this->printHello("Dunia", 21);
+    }
+
+    public function printHello(string $nama, int $angka)
+    {
+        echo "Halo ".$nama.", dengan angka ".$angka;
+    }
+
+    public function kedua()
+    {
+        $this->makan();
+    }
+
+    public function makan(bool $lapar = false)
+    {
+        if ($lapar)
+        {
+            echo "Ayo makan";
+        }
+        else
+        {
+            echo "Sudah kenyang";
+        }
+    }
+
+    public function ketiga()
+    {
+        return $this->menjumlahkanDuaAngka(25, 75);
+    }
+
+    public function menjumlahkanDuaAngka(int $angka1, int $angka2)
+    {
+        $hasil = $angka1 + $angka2;
+        return $hasil;
+    }
+
+    public function keempat()
+    {
+        //$hasilPembagian = $this->pembagianDuaAngka(45, 9);
+        $hasilPembagian = $this->pembagianDuaAngka(45, 0);
+        return $hasilPembagian;
+    }
+
+    public function pembagianDuaAngka(int $angka1, $angka2)
+    {
+        $iniNol = $this->cekNilaiNol($angka2);
+
+        if ($iniNol)
+        {
+            return "Angka kedua tidak boleh 0";
+        }
+
+        $hasil = $angka1 / $angka2;
+
+        return $hasil;
+    }
+   
+    public function cekNilaiNol(int $angka)
+    {
+        if ($angka == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
