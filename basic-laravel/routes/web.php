@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BasicPhpController;
-
+use App\Http\Controllers\TaskPHPDasarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +60,5 @@ Route::get('/function/pertama', [BasicPhpController::class, 'pertama']);
 Route::get('/function/kedua', [BasicPhpController::class, 'kedua']);
 Route::get('/function/ketiga', [BasicPhpController::class, 'ketiga']);
 Route::get('/function/keempat', [BasicPhpController::class, 'keempat']);
+
+Route::get('/task', [TaskPHPDasarController::class, 'task']);
