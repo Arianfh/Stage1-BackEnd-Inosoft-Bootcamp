@@ -177,7 +177,7 @@ echo $descriptor->describe($lingkaran)."\n";
 echo $descriptor->describe($persegi)."\n";
 echo $descriptor->describe($persegi_panjang)."\n";
 
-// memeperbesar
+// memperbesar
 
 $lingkaran->enlarge(4);
 $persegi->enlarge(4);
