@@ -33,3 +33,7 @@
 ## PHP DASAR
 - pengenalan mengenai variabel, tipe data, operator, percabangan, array, string, looping, dan function pada bahasa pemograman PHP
 - jika tipe data string dalam mengandung angka masih dapat diproses melalui tipe data integer
+
+## Object Oriented Programming (OOP)
+- pemahaman mengenai istilah class, object, attribute, method, parent class, child class,
+access modifier, contructor dan destructor
